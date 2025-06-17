@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+input,
+select,
+button {
+    margin: 5px;
+    padding: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+tr.listo {
+    background-color: #c8e6c9;
+}
+
+#resumen {
+    margin-top: 20px;
+}
+
+#total-precio {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* esto es mio */
+.food__button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 10px;
+    border: ;
+    border-radius: 80px; 
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+
+}
+
+.title__formulario {
+    color: #000000;
+}

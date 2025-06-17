@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Entrada de Pedidos</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Tabulador de ventas</h1>
+    </header>
+    <!-- Agregar nueva comida -->
+    <form id="agregar-comida-form" class="Food_form">
+      <input
+        type="text"
+        id="nueva-comida"
+        placeholder="Agregar nueva comida"
+        required
+        class="Food__imput"
+      />
+      <button type="submit" class="food__button">+</button>
+    </form>
+
+    <!-- Agregar pedido -->
+    <form id="formulario-pedido" class="formulario">
+      <h2 class="title__formulario">Añadir cliente</h2>
+      <input type="text" name="cliente" placeholder="Cliente" required />
+      <select name="comida" id="select-comida" required>
+        <option value="" disabled selected>Selecciona una comida</option>
+      </select>
+      <input
+        type="text"
+        name="cantidad"
+        placeholder="Cantidad (ej: 2 Individual)"
+        required
+      />
+      <input type="time" name="hora" required />
+      <input
+        type="number"
+        name="precio"
+        placeholder="Precio"
+        step="0.01"
+        required
+      />
+      <button type="submit">Agregar Pedido</button>
+    </form>
+
+    <!-- FILTROS Y ORDEN -->
+    <div id="filtros-orden" style="margin-top: 20px; margin-bottom: 20px">
+      <label for="filtro-comida">Filtrar por comida:</label>
+      <select id="filtro-comida">
+        <option value="todas" selected>Todas</option>
+      </select>
+
+      <button id="ordenar-hora" style="margin-left: 15px">
+        Ordenar por Hora
+      </button>
+      <button id="ordenar-listo" style="margin-left: 15px">
+        Ordenar por Estado Listo
+      </button>
+    </div>
+
+    <!-- Tabla de pedidos -->
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Comida</th>
+          <th>Cantidad</th>
+          <th>Hora</th>
+          <th>Precio</th>
+          <th>Listo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-pedidos"></tbody>
+    </table>
+
+    <!-- Resumen -->
+    <div id="resumen">
+      <h3>Resumen de Cantidades por Comida</h3>
+      <ul id="lista-resumen"></ul>
+      <div id="total-precio">Total de Precio: $0.00</div>
+    </div>
+
+    <button id="borrar-todo" style="margin-top: 20px">Borrar Todo</button>
+    <button id="descargar-datos" style="margin-top: 20px">
+      Descargar Datos
+    </button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
